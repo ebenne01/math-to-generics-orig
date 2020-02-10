@@ -15,13 +15,11 @@ func isOdd(_ n: Int) -> Bool {
 }
 
 func multiply0(_ n: Int, a: Int) -> Int {
-  print("multiply0: n=\(n), a=\(a)")
   if n == 1 { return a }
   return multiply0(n - 1, a: a) + a
 }
 
 func multiply1(_ n: Int, a: Int) -> Int {
-  print("multiply1: n=\(n), a=\(a)")
   if n == 1 { return a }
   let result = multiply1(half(n), a: a + a)
   if isOdd(n) {
