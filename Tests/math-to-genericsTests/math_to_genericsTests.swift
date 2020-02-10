@@ -63,6 +63,10 @@ final class math_to_genericsTests: XCTestCase {
   func testMultiply1WhenEven() {
     XCTAssertEqual(evenNTimesA, multiply1(evenN, a: a))
   }
+  
+  func testMultiply1() {
+    XCTAssertEqual(36 * 99, multiply1(36, a: 99))
+  }
 
   func testMultiply1WhenOdd() {
     XCTAssertEqual(oddNTimesA, multiply1(oddN, a: a))
@@ -71,6 +75,71 @@ final class math_to_genericsTests: XCTestCase {
   func testMultiplyBy15() {
     XCTAssertEqual(a * 15, multiplyBy15(a))
   }
+  
+  func testMultiplyAccumulate0() {
+    XCTAssertEqual(evenNTimesA, multiplyAccumulate0(0, n: evenN, a: a))
+  }
+  
+  func testMultiplyAccumulate0ByOne() {
+    XCTAssertEqual(a, multiplyAccumulate0(0, n: 1, a: a))
+  }
+  
+  func testMultiplyAccumulate1() {
+    XCTAssertEqual(evenNTimesA, multiplyAccumulate1(0, n: evenN, a: a))
+  }
+  
+  func testMultiplyAccumulate1ByOne() {
+    XCTAssertEqual(a, multiplyAccumulate1(0, n: 1, a: a))
+  }
+  
+  func testMultiplyAccumulate2() {
+    XCTAssertEqual(evenNTimesA, multiplyAccumulate2(0, n: evenN, a: a))
+  }
+  
+  func testMultiplyAccumulate2ByOne() {
+    XCTAssertEqual(a, multiplyAccumulate2(0, n: 1, a: a))
+  }
+  
+  func testMultiplyAccumulate3() {
+    XCTAssertEqual(evenNTimesA, multiplyAccumulate3(0, n: evenN, a: a))
+  }
+  
+  func testMultiplyAccumulate3ByOne() {
+    XCTAssertEqual(a, multiplyAccumulate3(0, n: 1, a: a))
+  }
+  
+  func testMultiplyAccumulate4() {
+    XCTAssertEqual(evenNTimesA, multiplyAccumulate3(0, n: evenN, a: a))
+  }
+  
+  func testMultiplyAccumulate4ByOne() {
+    XCTAssertEqual(a, multiplyAccumulate3(0, n: 1, a: a))
+  }
+  
+  func testMultiply2() {
+    XCTAssertEqual(evenNTimesA, multiply2(evenN, a: a))
+  }
+  
+  func testMultiply2ByOne() {
+    XCTAssertEqual(a, multiply2(1, a: a))
+  }
+  
+  func testMultiply3() {
+    XCTAssertEqual(evenNTimesA, multiply3(evenN, a: a))
+  }
+  
+  func testMultiply3ByOne() {
+    XCTAssertEqual(a, multiply3(1, a: a))
+  }
+  
+  func testMultiply4() {
+    XCTAssertEqual(evenNTimesA, multiply4(evenN, a: a))
+  }
+  
+  func testMultiply4ByOne() {
+    XCTAssertEqual(a, multiply4(1, a: a))
+  }
+
 
   static var allTests = [
     ("testHalfWhenEven", testHalfWhenEven),
@@ -83,5 +152,21 @@ final class math_to_genericsTests: XCTestCase {
     ("testMultiply1WhenEven", testMultiply1WhenEven),
     ("testMultiply1WhenOdd", testMultiply1WhenOdd),
     ("testMultiplyBy15", testMultiplyBy15),
+    ("testMultiplyAccumulate0", testMultiplyAccumulate0),
+    ("testMultiplyAccumulate0ByOne", testMultiplyAccumulate0ByOne),
+    ("testMultiplyAccumulate1", testMultiplyAccumulate1),
+    ("testMultiplyAccumulate1ByOne", testMultiplyAccumulate1ByOne),
+    ("testMultiplyAccumulate2", testMultiplyAccumulate2),
+    ("testMultiplyAccumulate2ByOne", testMultiplyAccumulate2ByOne),
+    ("testMultiplyAccumulate3", testMultiplyAccumulate3),
+    ("testMultiplyAccumulate3ByOne", testMultiplyAccumulate3ByOne),
+    ("testMultiplyAccumulate4", testMultiplyAccumulate4),
+    ("testMultiplyAccumulate4ByOne", testMultiplyAccumulate4ByOne),
+    ("testMultiply2", testMultiply2),
+    ("testMultiply2ByOne", testMultiply2ByOne),
+    ("testMultiply3", testMultiply3),
+    ("testMultiply3ByOne", testMultiply3ByOne),
+    ("testMultiply4", testMultiply4),
+    ("testMultiply4ByOne", testMultiply4ByOne),
   ]
 }
